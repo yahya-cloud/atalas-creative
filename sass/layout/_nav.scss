@@ -1,0 +1,117 @@
+.nav-box{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    transition: all .5s ease;
+    background-color: rgba(0,0,0, .5);
+
+    &.scrolled{
+        background-color: rgba(0,0,0, .9);
+        transition: background-color 200ms linear;
+
+     
+    }
+
+}
+.logo{
+    display: flex;
+    line-height: 1;
+    flex-direction:column;
+
+    // flex: 1;
+
+    &__text--1{
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: $font-heading;
+        font-size: 3rem;
+        color: $color-yellow;
+    }
+    &__text--2{
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 500;
+        color: $color-white;
+        letter-spacing: 6px;
+    }
+}
+.nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 8rem 2rem 8rem;
+
+    @include respond(phone) { // width < 900?
+        padding: 1rem 5rem 1rem 5rem;
+    }
+
+    &__list{
+        display: flex;
+        list-style-type: none;
+        margin-left: 6rem;
+        transition: all .3s ease-in;
+
+        @include respond(tab-port) { // width < 900?
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translate(100%, 101%);
+            background-color: rgba(0,0,0, .9);
+            flex-direction: column;
+            height: 100rem;
+            width: 25vw;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+
+       
+    }
+    &__item{
+        text-decoration: none;
+        margin-left: .5rem;
+        transition: .1s ease;
+    }
+
+
+    &__link{
+        text-decoration: none;
+        color: $color-white;
+        font-family: $font-primary;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 10px;
+        backface-visibility: none;
+        transition:  ease;
+        &:hover{
+            text-decoration: none;
+            color: $color-white;
+            border: 2px dashed $color-yellow;
+            transform: translateY(10px);
+           
+        }
+    }
+    &__icon{
+        height: 40px;
+        width: 40px;
+        fill: $color-white;
+        display: none;
+       
+
+        @include respond(tab-port) { // width < 900?
+           display: block;
+           
+        }
+ 
+    }
+}
+
+/////////////////////////////
+///Color on hover
+// .navbar-fixed-top.scrolled {
+//     z-index: 5;
+//     // opacity: .75;
+//     background-color: $color-black !important;
+//     transition: background-color 200ms linear;
+//   }

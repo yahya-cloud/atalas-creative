@@ -1,0 +1,50 @@
+.footer{
+
+
+    &__logo{
+        align-items: center;
+
+    }
+    &__input{
+        display: flex;
+
+        & > * {
+            margin-right: .5rem;
+        }
+
+
+        & > input {
+            border-radius: .5rem;
+            border: none;
+            padding: 10px;
+        }
+
+        & > a {
+            padding: 10px;
+            width: 8rem;
+            color: $color-white!important;
+        }
+    }
+    &__box{
+
+        &__icon{
+            & > * {
+                fill: $color-white;
+            }
+        }
+
+        &__text{
+            & > * {
+                text-transform: lowercase;
+                font-size: 1.6rem;
+                color: $color-white;
+            }
+
+            &--span{
+                text-transform: uppercase;
+                color: $color-blue;
+            }
+        
+        }
+    }
+}

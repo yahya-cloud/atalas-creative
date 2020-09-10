@@ -1,0 +1,164 @@
+.slider{
+    &__heading{
+        position: relative;
+        top: 2.5rem;
+        font-weight:300;
+        font-size: 2rem;
+      
+    }
+    &__outer{
+
+        @include respond(tab-port) { // width < 900?
+        display: none;
+        }
+    }
+    &__inner{
+        width: 40rem;
+        height:40rem;
+        overflow: hidden;
+        background-color: black;
+
+    }
+
+    &__inner img{
+            // width:40rem;
+            // height: 40rem;
+            width: 100%;
+            height: 100%;
+            transition: all .2s ease;
+            display: none;
+            
+
+            &:hover{
+                opacity: .25;
+            }
+          
+    }
+    &__inner img.slider-active{
+        display: inline-block;
+    }
+    
+    &__btn{
+        display: flex;
+        float: right;
+        position: relative;
+        top: -3rem;
+        left: -1rem;
+        z-index: 1;
+   
+
+
+        &--next, &--prev{
+   
+            background-color: $color-primary-grey;
+            width: 3rem;
+            height: 3rem;
+            padding:.5rem;
+            border-radius: 5px;
+        display: block;
+        position: relative;
+        z-index: 10;
+        font-size: 3rem;
+        cursor: pointer;
+        fill: $color-white;
+        transition:all .2s ease;
+        
+        &:hover{
+            background-color: $color-black;
+        }
+    
+    }
+        &--prev{
+            margin-left: 5px;
+        }
+    }
+
+    &__text-box h3{
+        color: $color-yellow;
+        cursor: pointer;
+        margin-top: 2rem;
+
+        &:hover{
+        text-decoration: underline;
+    }
+}
+
+&__slide{
+    width: 34rem;
+    display: none;
+
+    @include respond(tab-port) { // width < 900?
+      display: block;
+    }
+ 
+}
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 12rem;
+    &__icon{
+        height: 15px;
+        width: 15px;
+        fill: $color-details-grey;
+
+        &--1{
+            fill: $color-primary-grey;
+        }
+    }
+
+    & p{
+        font-family: $font-primary;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $color-details-grey;
+    }
+    &__date{
+        color:$color-primary-grey;
+    }
+
+    @include respond(tab-port) { // width < 900?
+        padding-right: 0;
+     }
+ 
+}
+
+
+.slider2{
+    &__heading{
+        display: inline-block;
+        border: 2px dashed $color-yellow;
+        padding: 1.5rem;
+    }
+    &__element{
+        text-align: center;
+        margin: 3rem;
+        display: none;
+
+        &__text{
+            font-weight: 700;
+        }
+
+        &__name{
+            text-transform: uppercase;
+            font-family:$font-paragraph;
+            font-weight: 900;
+            color: $color-yellow;
+        }
+
+        &__active{
+            display: inline-block;
+        }
+    }
+
+    &__btn{
+        &:first-child{
+            margin-right: 1rem;
+        }
+
+        height: 2rem;
+        width: 2rem;
+        fill: $color-primary-grey;
+
+    }
+}

@@ -1,0 +1,165 @@
+.card-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 4rem 2rem;
+
+    @include respond(phone) { // width < 900?
+        grid-gap: 1rem 2rem;
+    }
+
+}
+.custom-card{
+
+
+   min-height: 15rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   backface-visibility: hidden;
+   perspective: 150rem;
+   -moz-perspective: 150rem; 
+   transform: rotateY(90deg);  
+   transition: all .5s ease;
+
+   @include respond(tab-port) { // width < 900?
+    padding: 2.5rem;
+ }
+
+ @include respond(phone) { // width < 900?
+    padding: 3rem 5rem; //1 rem = 8px, 8/16 = 50%
+}
+
+   & > * {
+       margin-bottom: 1.5rem;
+   }
+
+}
+.card{
+    
+    &__border{
+        width: 100%;
+        border-bottom: 1px solid $color-border-grey;
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        align-items: center;
+        grid-column-gap: .5rem;
+   
+   
+        &::before,
+        &::after{
+            content: "";
+            height: 1px;
+            opacity: 0;
+            background-color:$color-yellow;
+            align-self: end;
+            
+        }
+
+        
+    
+     
+
+        & > svg {
+            fill: $color-yellow;
+            height: 1.5rem;
+            width: 1.5rem;
+            opacity: 0;
+            
+ 
+        }
+
+
+      
+
+     
+    }
+    &__plan{
+        margin-top: 2.5rem;
+        color: $color-secondary-grey;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        & > * {
+            margin-bottom: 1.8rem;
+        }
+
+        &__count{
+            &--cur{
+                font-family: $font-heading;
+                font-size: 2rem;
+                font-weight: 700;
+                position: absolute;
+                left: -2rem;
+                top: 5.5rem;
+            }
+
+            &--num{
+                font-family: $font-primary;
+                font-size: 5.5rem;
+                font-weight: 700;
+            }
+        }
+
+        &__text{
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+   
+    }
+
+ 
+
+    &__spec{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px dashed $color-border-grey;
+        width: 100%;
+
+        &__text{
+
+            &:not(:last-child){
+                border-bottom: 2px dashed $color-border-grey;
+            }
+            text-align: center;
+            width: 100%;
+            font-family: $font-primary;
+            font-weight: 600;
+            font-size: 1.3rem;
+            padding: 2rem;
+            color: $color-primary-grey;
+            
+
+        }
+    }
+
+    
+}
+
+.custom-card:hover  {
+    & .card__border{
+         border-bottom: none;
+   
+        &::before,
+        &::after{
+          opacity: 1;
+        }
+
+        & > svg {
+            opacity: 1;
+        }
+    }
+
+    & .card__plan__heading,.card__plan__count--cur, .card__plan__count--num   {
+        color: $color-yellow;
+    }
+
+    & .card__spec {
+        background-color:$color-hover-grey;
+    }
+
+
+
+}

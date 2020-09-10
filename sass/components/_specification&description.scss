@@ -1,0 +1,98 @@
+.specification{
+    width: 24rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > :not(:last-child){
+        margin-bottom: 2.2rem;
+    }
+
+    &__icon{
+        width: 35px;
+        height: 35px;
+        fill: $color-yellow;
+    }
+
+    &__heading{
+        font-weight:400;
+        font-size: 1.6rem;
+    }
+
+    &__text{
+        text-align: center;
+        letter-spacing: 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+       
+
+        &--2{
+            text-align: left;
+        }
+    }
+
+}
+
+.description{
+    &__text{
+        flex: 60rem;
+
+
+        &--link{
+            color: $color-yellow;
+            font-weight: 700;
+            cursor: pointer;
+            &:hover{
+            text-decoration: underline;
+        }
+    }
+    }
+    &__skills{
+        flex: 40rem;
+    }
+
+ 
+    
+}
+.skill{
+    margin-top: 3rem;
+
+    &__box{
+    width: 100%;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    border-bottom: 1px solid $color-border-grey;
+    }
+    &__level{
+        align-self: flex-end;
+        height: .8rem;
+        background-color: $color-yellow;
+        display: block;
+        margin-right: auto;
+
+        &--1{
+            width: 80%;
+        }
+        &--2{
+            width: 80%;
+        }
+        &--3{
+            width: 65%;
+        }
+        &--4{
+            width: 78%;
+        }
+        &--5{
+            width: 90%;
+        }
+
+    }
+    &__percentage{
+        position: relative;
+        top: .5rem;
+        font-family: $font-paragraph;
+        font-weight: 900;
+        display: block;
+    }
+}

@@ -1,0 +1,22 @@
+.services{
+    &__feature{
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-row-gap: 1rem;
+        grid-column-gap:2.5rem;
+        backface-visibility: hidden;
+        transition: all 1s ease-in;
+    
+        &__icon{
+            fill: $color-yellow;    
+            height: 3.5rem;
+            width: 3.5rem;
+            grid-row: 1 / span 2;
+            transform: translateY(-1rem); 
+
+        }
+        &__text{
+
+        }
+    }
+}

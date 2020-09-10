@@ -1,0 +1,138 @@
+.contact{
+    &__text-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        & > *{
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__icon{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        flex-wrap: wrap;
+
+        & > * {
+            margin: 2rem;
+        }
+    }
+}
+.text-box{
+
+    &__link{
+        & > *{
+            margin-left: 2rem;
+            text-transform: uppercase;
+            font-family: $font-heading;
+            font-size:$default-font-size;
+            color: $color-primary-grey!important;
+            cursor: pointer;
+        }
+
+        &--1{
+  
+        }
+
+        &--2{
+
+        }
+    }
+
+    &__text{
+        text-align: center;
+        letter-spacing: .1rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $color-dark-grey;
+
+    }
+}
+
+.form{
+    & > * {
+        margin-bottom: 1.5rem;
+    }
+    width: 100%;
+  display: grid;
+  grid-template-rows: min-content 20vw min-content;
+  grid-auto-columns: 1fr;
+
+    &__input-box{
+        align-self: stretch;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+     
+    }
+
+    .text-area-box{
+
+    }
+
+    &__text-area{
+        border:1px solid $color-border-grey;
+        transition: border .3s ease;
+        margin: 1rem;
+        &:focus, &:active {
+            border:1px solid $color-yellow;
+        }
+    }
+
+    &__btn{
+        justify-self: center;
+    }
+}
+.input{
+    height: 5rem;
+    width: 7rem;
+    flex: 1;
+    padding: 1rem;
+    border:1px solid $color-border-grey;
+    margin: 1rem;
+    transition: all .3s ease;
+
+
+    &:focus, &:active {
+        border:1px solid $color-yellow;
+    }
+
+
+    &--1{
+
+    }
+
+    &--2{
+        
+    }
+
+    &--3{
+      
+    }
+}
+::placeholder {
+    font-size: 1.3rem;
+  }
+
+  .icon-box{
+      text-align: center;
+      width: 25rem;
+
+    &--icon{
+        width:4.5rem;
+        height:4.5rem;
+        fill: $color-yellow;
+        margin-bottom: 1.5rem;
+    }
+
+    &--text{
+        text-transform: initial;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $color-dark-grey;
+    }
+  }

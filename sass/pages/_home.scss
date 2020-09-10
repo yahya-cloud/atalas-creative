@@ -1,0 +1,159 @@
+.intro{
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    background-color: $color-secondary-white;
+    
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    justify-items: center;
+    
+
+    &__img{
+        width: 60%;
+        opacity: 0;
+        transform: translateY(2.5rem);
+        transition: all .5s ease-in;
+    }
+
+    &__features{
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    
+        
+    }
+}
+.about{
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: minmax(50%, 1200px);
+    justify-content: center;
+
+    &__box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+         & > *{
+             margin: 2rem;
+             margin-right: 4rem;
+         }
+    }
+
+    &__description{
+        display: flex;
+        flex-wrap: wrap;
+         & > div{
+             margin: 2rem;
+         }
+    }
+  
+}
+.services{
+    grid-column: 1 / -1;
+    display: grid;
+
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: minmax(50%, 1200px);
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-secondary-white;
+
+    &__feature--box{
+        
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
+    grid-gap: 6rem;
+
+    @include respond(tab-port) { // width < 900?
+        margin: 2rem;
+     }
+    }
+
+    &__slider{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+.section-cards{
+    grid-column: 1 / -1;
+    display: grid;
+    background-color: $color-white;
+
+    grid-template-rows: repeat(5, min-content);
+    grid-template-columns: minmax(50%, 1200px);
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery,.contact{
+    grid-column: 1 / -1;
+    display: grid;
+    background-color: $color-white;
+
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: minmax(50%, 1200px);
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 18rem;
+}
+
+.composition{
+    grid-column: 1 / -1;
+    height: 40vw;
+    background-color: rgba(150, 119, 25, 0.68);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+  
+    &__heading{
+        text-align: center;
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: $color-white;
+        margin-top: 4rem;
+
+        @include respond(tab-port) { // width < 900?
+            font-size: 2rem
+        }
+
+    }
+
+    &__img{
+        width: 80%;
+    }
+}
+
+.contact{
+    & > * {
+        margin: 3rem;
+    }
+    grid-template-rows: repeat(4, min-content);
+    margin-bottom: 11rem;
+}
+
+.footer{
+    grid-column: 1/ -1;
+    background-color: $color-black;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
