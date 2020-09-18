@@ -107,6 +107,15 @@
     }
 }
 
+.active1{
+    text-decoration: none;
+    color: $color-white;
+    border: 2px dashed $color-yellow;
+    transform: translateY(10px);
+}
+
+
+
 /////////////////////////////
 ///Color on hover
 // .navbar-fixed-top.scrolled {

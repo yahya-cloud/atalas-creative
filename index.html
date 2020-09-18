@@ -17,7 +17,7 @@
 <body>
   
      <div class="grid-container">
-        <header class="header">
+        <header id="section1" class="header">
       
           <div class="nav-box  navbar-fixed-top">
           <nav class="nav">
@@ -28,28 +28,28 @@
             <ul class="nav__list">
 
               <li class="nav__item">
-                <a href="#" class="nav__link">home</a>
+                <a href="#section1" id="anchor1" class="nav__link">home</a>
               </li>
               <li class="nav__item">
-                <a href="#whyUs" class="nav__link">why us?</a>
+                <a href="#section2" id="anchor2" class="nav__link">why us?</a>
               </li>
               <li class="nav__item">
-                <a href="#about" class="nav__link">about </a>
+                <a href="#section3" id="anchor3" class="nav__link">about </a>
               </li>
               <li class="nav__item">
-                <a href="#services" class="nav__link">services</a>
+                <a href="#section4" id="anchor4" class="nav__link">services</a>
               </li>
               <li class="nav__item">
-                <a href="#pricing" class="nav__link">pricing</a>
+                <a href="#section5" id="anchor5" class="nav__link">pricing</a>
               </li>
               <li class="nav__item">
-                <a href="#team" class="nav__link">team</a>
+                <a href="#section6" id="anchor6" class="nav__link">team</a>
               </li>
               <li class="nav__item">
-                <a href="#gallery" class="nav__link">Gallery</a>
+                <a href="#section7" id="anchor7" class="nav__link">Gallery</a>
               </li>
               <li class="nav__item">
-                <a href="#contact" class="nav__link">contact</a>
+                <a href="#section8" id="anchor8" class="nav__link">contact</a>
               </li>
              
             </ul>
@@ -125,7 +125,7 @@
 
   </header>
 
-        <section id="whyUs" class="intro">
+        <section id="section2" class="intro">
 
           <div class="text-box u-margin-top-medium u-margin-bottom-medium fade">
             <h2 class="heading--2 ">
@@ -358,7 +358,7 @@
           </div>
         
         </section>
-        <section id="about" class="about">
+        <section id="section3" class="about">
           <div class="text-box u-margin-top-medium u-margin-bottom-medium fade">
             <h2 class="heading--2 about__heading">
               about
@@ -524,7 +524,7 @@
             </div>
           </div>
         </div>
-        <section id="services" class="services">
+        <section id="section4" class="services">
 
           <div class="text-box u-margin-top-medium fade">
             <h2 class="heading--2 about__heading">
@@ -702,7 +702,7 @@
         </div>
 
 
-        <section id="pricing" class="section-cards u-margin-bottom-huge">
+        <section id="section5" class="section-cards u-margin-bottom-huge">
           <div class="text-box text-box--border-none u-margin-top-medium fade">
             <h2 class="heading--2 about__heading">
               Pricing structure
@@ -845,7 +845,7 @@
             </p>
           </div>
 
-          <div  class="person-container">
+          <div id="section6" class="person-container">
 
             <div class="person-box u-margin-top-medium">
               <!----------------------------------PERSON 1---------------------->
@@ -1031,7 +1031,7 @@
           </div>
         </div>
 
-        <section id="gallery" class="gallery ">
+        <section id="section7" class="gallery ">
           <div class="text-box u-margin-top-medium u-margin-bottom-medium fade">
             <h2 class="heading--2 ">
               OUR BEST WORK
@@ -1196,7 +1196,7 @@
         </section>
 
 
-        <section id="contact" class="contact">
+        <section id="section8" class="contact">
           
           <div class="text-box  u-margin-top-medium fade">
             <h2 class="heading--2 about__heading">
@@ -1319,6 +1319,27 @@
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
+integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" 
+crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" 
+integrity="sha512-HzAEuXwhLxwm/Jj+5ecdjzrRVrjuh2ZeIxyT1Ln37TO5pWNMnKBuU7cfd1wvRQ/k86w1oC174Yk1T7aRlBpIcA=="
+crossorigin="anonymous"></script>    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"
+integrity="sha512-jlbgjhSLRQsQc/bits6lHjywF3n/NLO3Sz1rwa9gsUnCOi0f0lD/yAul75UNOzIiDg35zaJJ3BKT3zo6+i9lQA==" 
+crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js" 
+integrity="sha512-uJopPZrz4LAKEGA+MX8mOVQ4YPmaQUPdBu69Gj52/IKC69XIkmvjGrc84UuQ6yJs0tYaaF0r32oQINBXz4t0Pg==" 
+crossorigin="anonymous"></script>
+
+
+
 <script src="index.js"></script>   
   </body>
 </html>

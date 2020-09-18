@@ -63,10 +63,89 @@ const navObserver = new IntersectionObserver(
     /////////ELEMENTS WITH FADE IN EFFECTS
 
 
-    const fadeOptions = {
-        rootMargin: "-50px"
-    }
+  
 
+
+
+
+var controller = new ScrollMagic.Controller({
+    globalSceneOptions:{
+        duration: 1000,
+        triggerHook: 0.25,
+        reverse: true
+    }
+});
+
+var scenes = {
+    scene1: {
+        'section1': 'anchor1'
+    },
+    scene2: {
+        'section2': 'anchor2'
+    },
+    scene3: {
+        'section3': 'anchor3'
+    },
+    scene4: {
+        'section4': 'anchor4'
+    },
+    scene5: {
+        'section5': 'anchor5'
+    },
+    scene6: {
+        'section6': 'anchor6'
+    },
+    scene7: {
+        'section7': 'anchor7'
+    },
+    scene8: {
+        'section8': 'anchor8'
+    }
+    
+}
+
+for(var key in scenes){
+
+    var obj = scenes[key];
+  
+
+    for(var prop in obj){
+
+        new ScrollMagic.Scene({
+            triggerElement:'#' + prop
+        })
+        .setClassToggle('#'+ obj[prop], 'active1')
+        .addTo(controller)
+    }
+}
+
+controller.scrollTo(function(target){
+
+    TweenMax.to(window, 1, {
+        scrollTo:{
+            y: target,
+            autoKill: true
+        },
+        ease: Cubic.easeInOut
+    });
+    
+});
+
+navList.addEventListener('click', e => {
+   var target = e.target;
+   var id = target.getAttribute('href');
+  if(id !== null){
+      e.preventDefault();
+      controller.scrollTo(id);
+  }
+ 
+})
+
+
+
+const fadeOptions = {
+    rootMargin: "-50px"
+}
 
     const fadeElObserver = new IntersectionObserver(
         function(
